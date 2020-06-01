@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:id="@+id/music_top_layout"
+        android:background="#F44337"
+        >
+         <ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/music_top_menu"
+    android:layout_marginLeft="10dp"
+    android:src="@mipmap/ic_menu"
+    android:layout_centerVertical="true"
+         />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/music_top_menu_search"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/ic_menu_search"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+
+            />
+
+        <RadioGroup
+            android:id="@+id/main_radioGroup"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/local_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:text="@string/local_music"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textColor="@drawable/text_color_selector"
+
+                />
+            <RadioButton
+                android:id="@+id/online_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:text="@string/online_music"
+                android:gravity="center"
+                android:textColor="@drawable/text_color_selector"
+                android:textSize="20sp"
+                />
+        </RadioGroup>
+
+    </RelativeLayout>
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/main_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="70dp"
+        android:layout_weight="1"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        />
+   <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:layout_alignParentBottom="true"
+    android:id="@+id/music_bottom_layout"
+    >
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@mipmap/default_artist"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/music_bottom_pic"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/music_bottom_song"
+        android:text="歌名"
+        android:layout_toRightOf="@id/music_bottom_pic"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/music_bottom_singer"
+        android:text="歌手 "
+        android:textSize="14sp"
+        android:layout_below="@id/music_bottom_song"
+        android:layout_alignLeft="@id/music_bottom_song"
+        android:layout_marginTop="10dp"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/music_bottom_playlist"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/ic_play_bar_btn_playlist"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/music_bottom_next"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/ic_play_bar_btn_next"
+        android:layout_toLeftOf="@id/music_bottom_playlist"
+        android:layout_marginRight="10dp"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/music_bottom_play"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/ic_play_bar_btn_play"
+        android:layout_toLeftOf="@id/music_bottom_next"
+        android:layout_marginRight="10dp"/>
+
+</RelativeLayout>
+
+
+
+
+</RelativeLayout>

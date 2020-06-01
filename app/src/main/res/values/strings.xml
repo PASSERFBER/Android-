@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MusicApplication</string>
+    <string name="album_pic">专辑图片</string>
+    <string name="lyric">歌词</string>
+    <string name="local_music">本地音乐</string>
+    <string name="online_music">在线音乐</string>
+</resources>

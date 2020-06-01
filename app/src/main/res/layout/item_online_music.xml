@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+        <ImageView
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:id="@+id/online_music_pic"
+            android:src="@mipmap/default_artist"
+            android:layout_marginLeft="10dp"
+
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/online_music_first"
+            android:layout_toRightOf="@id/online_music_pic"
+            android:layout_marginTop="15dp"
+            android:text="第一首歌"
+            android:textSize="15sp"
+            android:layout_marginLeft="10dp"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/online_music_second"
+            android:layout_below="@+id/online_music_first"
+            android:text="第二首歌"
+            android:textSize="15sp"
+            android:layout_marginTop="5dp"
+            android:layout_alignLeft="@+id/online_music_first"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/online_music_third"
+            android:text="第三首歌"
+            android:textSize="15sp"
+            android:layout_marginTop="5dp"
+            android:layout_alignLeft="@id/online_music_first"
+            android:layout_below="@id/online_music_second"
+            />
+
+
+
+    </RelativeLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

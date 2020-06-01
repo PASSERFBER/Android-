@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/play_page_default_bg"
+
+    tools:context=".Activity.PlayActivity">
+
+    <RelativeLayout
+        android:id="@+id/play_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#666666"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/play_top_down"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+
+            android:src="@mipmap/ic_arrow_down" />
+
+        <TextView
+            android:id="@+id/play_top_song"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/play_top_down"
+            android:text="桥边姑娘"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/play_top_singer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/play_top_song"
+            android:layout_alignLeft="@id/play_top_song"
+            android:text="舞蹈女神诺涵"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+
+            />
+    </RelativeLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/play_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="56dp"
+        android:layout_marginBottom="115dp"
+        android:layout_weight="1"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/play_middle_layout"
+        >
+        <RadioButton
+            android:id="@+id/radio_dot1"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="170dp"
+            android:textColor="@drawable/text_color_selector"
+            />
+        <RadioButton
+            android:id="@+id/radio_dot2"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@drawable/text_color_selector"
+            />
+    </RadioGroup>
+    <RelativeLayout
+        android:id="@+id/play_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/play_bottom_loop"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/ic_play_btn_loop"
+            android:layout_centerVertical="true"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/play_bottom_prev"
+            android:src="@mipmap/ic_play_btn_prev"
+            android:layout_toLeftOf="@id/play_bottom_play"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/play_bottom_play"
+            android:src="@mipmap/ic_play_btn_play"
+            android:layout_centerHorizontal="true" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/play_bottom_next"
+            android:src="@mipmap/ic_play_btn_next"
+            android:layout_toRightOf="@id/play_bottom_play"
+        />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/play_middle_layout"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/play_bottom_layout"
+        tools:layout_editor_absoluteX="1dp">
+
+
+
+        <TextView
+            android:id="@+id/play_middle_now_time"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="00:00:00"
+            android:textColor="#FFFFFF"/>
+
+        <SeekBar
+            android:id="@+id/play_middle_seekBar"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_weight="1.00" />
+
+        <TextView
+            android:id="@+id/play_middle_total_time"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="00:00:00"
+            android:textColor="#FFFFFF"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
